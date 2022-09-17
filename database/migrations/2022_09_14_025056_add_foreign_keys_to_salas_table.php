@@ -14,8 +14,8 @@ class AddForeignKeysToTbSalasTable extends Migration
     public function up()
     {
         Schema::table('salas', function (Blueprint $table) {
-            $table->foreign(['idsalas'], 'FK_salas_tipagem_salas')->references(['idtipagem_salas'])->on('tb_tipagem_salas')->onUpdate('NO ACTION')->onDelete('NO ACTION');
-            $table->foreign(['idsalas'], 'FK_salas_tipagem_predio')->references(['idpredios'])->on('tb_predios')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+            $table->foreign(['idsalas'], 'FK_salas_tipagem_salas')->references(['idtipagem_salas'])->on('tipagem_salas')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+            $table->foreign(['idsalas'], 'FK_salas_tipagem_predio')->references(['idpredios'])->on('predios')->onUpdate('NO ACTION')->onDelete('NO ACTION');
         });
     }
 

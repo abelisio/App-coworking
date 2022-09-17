@@ -2,35 +2,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Sala;
+use App\TipagemSala;
 
-class SalasController extends Controller
+class TipagemSalasController extends Controller
 {
-    private $sala;
+    private $tipagemsala;
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(Sala $sala)
+    public function __construct(TipagemSala $tipagemsala)
     {
-        $this->sala = $sala;
+        $this->tipagemsala = $tipagemsala;
     }
 
     public function index()
     {
-        return $this->sala->paginate(10);
+        return $this->tipagemsala->paginate(10);
     }
 
-    public function show($sala)
+    public function show($tipagemsala)
     {
-        return $this->sala->findOrFail($sala);
+        return $this->tipagemsala->findOrFail($tipagemsala);
     }
 
     public function store(Request $request)
     {
-        $this->sala->create($request->all());
+        $this->tipagemsala->create($request->all());
 
         //mensagem de criacao...
         return response()
@@ -39,10 +39,10 @@ class SalasController extends Controller
                            ]);
     }
 
-    public function update(Request $request, $sala)
+    public function update(Request $request, $tipagemsala)
     {
-        $sala = $this->sala->find($sala);
-        $sala->update($request->all());
+        $tipagemsala = $this->tipagemsala->find($tipagemsala);
+        $tipagemsala->update($request->all());
 
         return response()
             ->json([
@@ -53,11 +53,11 @@ class SalasController extends Controller
     }
 
 
-    public function destroy($sala)
+    public function destroy($tipagemsala)
     {
-        $sala = $this->sala->find($sala);
+        $tipagemsala = $this->tipagemsala->find($tipagemsala);
 
-        $sala->delete();
+        $tipagemsala->delete();
 
         return response()
             ->json([

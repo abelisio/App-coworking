@@ -7,7 +7,7 @@ use App\Sala;
 class SalasController extends Controller
 {
     private $sala;
-
+ 
     /**
      * Create a new controller instance.
      *
