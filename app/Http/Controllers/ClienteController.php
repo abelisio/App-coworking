@@ -30,9 +30,9 @@ class ClienteController extends Controller
 
     public function store(Request $request)
     {
-        $this->cliente->create($request->all());
 
-        //mensagem de criacao...
+         $this->cliente->create($request->all());
+
         return response()
                     ->json(['data' => [
                                 'message' => 'O cliente foi criado com sucesso!']
