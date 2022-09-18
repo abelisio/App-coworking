@@ -25,7 +25,7 @@ class ClienteController extends Controller
 
     public function show($cliente)
     {
-        return $this->cliente->findOrFail($cliente);
+        return $this->cliente->find($cliente);
     }
 
     public function store(Request $request)
@@ -35,7 +35,7 @@ class ClienteController extends Controller
         //mensagem de criacao...
         return response()
                     ->json(['data' => [
-                                'message' => 'cliente foi criado com sucesso!']
+                                'message' => 'O cliente foi criado com sucesso!']
                            ]);
     }
 
@@ -47,7 +47,7 @@ class ClienteController extends Controller
         return response()
             ->json([
                 'data' => [
-                    'message' => 'cliente foi atualizado com sucesso!'
+                    'message' => 'O cliente foi atualizado com sucesso!'
                 ]
             ]);
     }
@@ -62,7 +62,7 @@ class ClienteController extends Controller
         return response()
             ->json([
                 'data' => [
-                    'message' => 'cliente foi removido com sucesso!'
+                    'message' => 'O cliente foi removido com sucesso!'
                 ]
             ]);
     }

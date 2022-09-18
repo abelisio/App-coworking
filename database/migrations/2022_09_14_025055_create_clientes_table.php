@@ -14,7 +14,7 @@ class CreateTbClientesTable extends Migration
     public function up()
     {
         Schema::create('clientes', function (Blueprint $table) {
-            $table->integer('idclientes', true);
+            $table->integer('id', true);
             $table->string('razao_social');
             $table->string('nome_fantasia')->nullable();
             $table->string('cnpj', 14);

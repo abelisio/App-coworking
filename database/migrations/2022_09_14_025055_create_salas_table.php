@@ -14,12 +14,12 @@ class CreateTbSalasTable extends Migration
     public function up()
     {
         Schema::create('salas', function (Blueprint $table) {
-            $table->integer('idsalas', true);
+            $table->integer('id', true);
             $table->string('nome_predio')->nullable();
             $table->string('imgpredio_nome', 200)->nullable();
             $table->string('descricao')->nullable();
             $table->string('tipagem_sala', 100)->nullable()->index('FK_salas_tipagem_salas_idx');
-            $table->integer('idtipagem_salas');
+            $table->integer('id_salas');
         });
     }
 

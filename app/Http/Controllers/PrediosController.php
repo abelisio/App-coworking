@@ -35,7 +35,7 @@ class PrediosController extends Controller
         //mensagem de criacao...
         return response()
                     ->json(['data' => [
-                                'message' => 'predio foi criado com sucesso!']
+                                'message' => 'O predio foi criado com sucesso!']
                            ]);
     }
 
@@ -47,7 +47,7 @@ class PrediosController extends Controller
         return response()
             ->json([
                 'data' => [
-                    'message' => 'predio foi atualizado com sucesso!'
+                    'message' => 'O predio foi atualizado com sucesso!'
                 ]
             ]);
     }
@@ -62,7 +62,7 @@ class PrediosController extends Controller
         return response()
             ->json([
                 'data' => [
-                    'message' => 'predio foi removido com sucesso!'
+                    'message' => 'O predio foi removido com sucesso!'
                 ]
             ]);
     }

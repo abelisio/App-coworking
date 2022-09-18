@@ -14,7 +14,7 @@ class CreateLogradourosTable extends Migration
     public function up()
     {
         Schema::create('logradouros', function (Blueprint $table) {
-            $table->increments('idlogradouro');
+            $table->increments('id');
             $table->enum('ativo', ['S', 'N'])->default('S')->index('logradouros_index_ativo');
             $table->enum('ativo_painel', ['S', 'N'])->default('S')->index('logradouros_index_ativo_painel');
             $table->dateTime('data_cad');

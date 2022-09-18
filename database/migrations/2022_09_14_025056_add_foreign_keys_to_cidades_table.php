@@ -14,7 +14,7 @@ class AddForeignKeysToCidadesTable extends Migration
     public function up()
     {
         Schema::table('cidades', function (Blueprint $table) {
-            $table->foreign(['idestado'], 'cidades_idestado')->references(['idestado'])->on('estados')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+            $table->foreign(['id'], 'cidades_ide')->references(['id'])->on('estados')->onUpdate('NO ACTION')->onDelete('NO ACTION');
         });
     }
 
@@ -26,7 +26,7 @@ class AddForeignKeysToCidadesTable extends Migration
     public function down()
     {
         Schema::table('cidades', function (Blueprint $table) {
-            $table->dropForeign('cidades_idestado');
+            $table->dropForeign('cidades_ide');
         });
     }
 }

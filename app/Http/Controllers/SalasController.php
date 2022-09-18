@@ -35,7 +35,7 @@ class SalasController extends Controller
         //mensagem de criacao...
         return response()
                     ->json(['data' => [
-                                'message' => 'sala foi criado com sucesso!']
+                                'message' => 'A sala foi criada com sucesso!']
                            ]);
     }
 
@@ -47,7 +47,7 @@ class SalasController extends Controller
         return response()
             ->json([
                 'data' => [
-                    'message' => 'sala foi atualizado com sucesso!'
+                    'message' => 'A sala foi atualizada com sucesso!'
                 ]
             ]);
     }
@@ -62,7 +62,7 @@ class SalasController extends Controller
         return response()
             ->json([
                 'data' => [
-                    'message' => 'sala foi removido com sucesso!'
+                    'message' => 'A sala foi removida com sucesso!'
                 ]
             ]);
     }

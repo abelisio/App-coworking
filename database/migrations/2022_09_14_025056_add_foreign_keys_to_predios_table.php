@@ -14,7 +14,7 @@ class AddForeignKeysToTbPrediosTable extends Migration
     public function up()
     {
         Schema::table('predios', function (Blueprint $table) {
-            $table->foreign(['idpredios'], 'FK_predios_clientes')->references(['idclientes'])->on('clientes')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+            $table->foreign(['id'], 'FK_predios_clientes')->references(['id'])->on('clientes')->onUpdate('NO ACTION')->onDelete('NO ACTION');
         });
     }
 

@@ -14,7 +14,7 @@ class CreateTbPrediosTable extends Migration
     public function up()
     {
         Schema::create('predios', function (Blueprint $table) {
-            $table->integer('idpredios', true);
+            $table->integer('id', true);
             $table->string('nome_predio')->nullable();
             $table->string('descricao')->nullable();
             $table->string('endereco', 100)->nullable();

@@ -14,7 +14,7 @@ class CreateTbTipagemSalasTable extends Migration
     public function up()
     {
         Schema::create('tipagem_salas', function (Blueprint $table) {
-            $table->integer('idtipagem_salas', true);
+            $table->integer('id', true);
             $table->string('nome_salas')->nullable();
             $table->text('descricao')->nullable();
         });
